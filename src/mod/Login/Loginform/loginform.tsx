@@ -44,7 +44,7 @@ const LoginForm = () => {
   return (
     <>
       <form
-        className="flex flex-col gap-3 m-5 items-center"
+        className="flex flex-col gap-3 items-center"
         onSubmit={handleSubmit}
       >
         <Input
@@ -52,6 +52,7 @@ const LoginForm = () => {
           icon="fa-solid fa-envelope"
           placeholder="E-mail"
           name="Email"
+          className="w-[70%]"
           inputAttributes={{ autoComplete: "email" }}
         />
         <Input
@@ -59,9 +60,10 @@ const LoginForm = () => {
           icon="fa-solid fa-lock"
           placeholder="Password"
           name="Password"
+          className="w-[70%]"
           inputAttributes={{ autoComplete: "current-password" }}
         />
-        <MagicButton type="styled" className="w-[30%]">
+        <MagicButton type="styled" className="lg:w-[30%] md:w-[15%]">
           Login
           <i className="fa-solid fa-arrow-right m-2"></i>
         </MagicButton>

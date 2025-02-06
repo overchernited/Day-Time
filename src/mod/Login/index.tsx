@@ -11,8 +11,6 @@ const Login = () => {
   const handleProvider = () => {
     openModal(
       "Stop there!",
-      "auto",
-      "30%",
       <ProvidersForm />,
       "fa-solid fa-hand"
     );
@@ -27,10 +25,10 @@ const Login = () => {
 
   return (
     <div className="flex flex-col h-full w-full justify-center items-center">
-      <p className="text-3xl text-white font-bold">
+      <p className="text-xl  md:text-3xl text-white font-bold">
         Login to reach your objectives!
       </p>
-      <div className="flex flex-row w-full justify-between m-1">
+      <div className="flex flex-row lg:w-full justify-between m-1">
         <MagicButton
           onClick={handleLoginWithGoogle}
           className="w-full rounded-lg"

@@ -9,8 +9,6 @@ const Modal = () => {
     modalContent,
     modalTitle,
     modalIcon,
-    modalHeight,
-    modalWidth,
   } = useModal();
 
   // Estado para forzar la reinicialización de la animación cuando el contenido cambia
@@ -29,7 +27,7 @@ const Modal = () => {
           key={modalKey} // Usamos la clave para reiniciar la animación cada vez que cambia
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+           exit={{ opacity: 0 }}
           transition={{ duration: 0.1 }}
           onClick={() => closeModal()}
           className="fixed w-full h-full z-[1200] backdrop-blur-md flex justify-center items-center"
@@ -38,8 +36,7 @@ const Modal = () => {
             initial={{ x: -50, opacity: 0.1 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ y: 50, opacity: 0 }} // Agregamos animación de desplazamiento y opacidad
-            className="bg-[#1b1a1a] rounded-2xl relative"
-            style={{ width: modalWidth, height: modalHeight }}
+            className="bg-[#1b1a1a] rounded-2xl relative w-full overflow-hidden h-full md:w-[40%] md:h-[90%] lg:w-[40%] lg:h-[80%] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="bg-[#0e0e10] w-full rounded-t-2xl p-1">
@@ -49,7 +46,7 @@ const Modal = () => {
               </p>
             </div>
             <motion.div
-              className="p-3 h-full w-full relative"
+              className=" h-full w-full relative"
               animate={{ x: [-200, 0] }}
               exit={{ x: [0, -200] }} // Agregamos animación de salida también
             >

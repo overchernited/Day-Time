@@ -9,8 +9,6 @@ const AuthButtons = () => {
   const handleOpenLogin = () => {
     openModal(
       "Login",
-      "auto",
-      "30%",
       <Login />,
       "fa-solid fa-right-to-bracket"
     );
@@ -19,8 +17,6 @@ const AuthButtons = () => {
   const handleOpenSignup = () => {
     openModal(
       "Signup",
-      "auto",
-      "30%",
       <Signup />,
       "fa-solid fa-person-walking-arrow-right"
     );
