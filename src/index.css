@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+body,
+html,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #151515;
+}
+
+.navBar {
+  background: rgb(56, 132, 173);
+  background: linear-gradient(
+    90deg,
+    rgba(56, 132, 173, 1) 37%,
+    rgba(40, 81, 91, 1) 90%
+  );
+}
+
+.fa-gradient {
+  background: rgb(56, 132, 173);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(56, 132, 173, 1) 37%,
+    rgba(40, 81, 91, 1) 90%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(56, 132, 173, 1) 37%,
+    rgba(40, 81, 91, 1) 90%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(56, 132, 173, 1) 37%,
+    rgba(40, 81, 91, 1) 90%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3884ad",endColorstr="#28515b",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
